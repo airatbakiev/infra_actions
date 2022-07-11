@@ -73,7 +73,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          # Выполняет pull образа с DockerHub
+          # Выполняет pull образа из DockerHub
           sudo docker pull bakievdocker/infra_actions:latest
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
